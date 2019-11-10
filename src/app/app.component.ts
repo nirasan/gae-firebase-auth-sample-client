@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,7 @@ import { auth } from 'firebase/app';
   `,
 })
 export class AppComponent {
-  constructor(public afAuth: AngularFireAuth) {
+  constructor(public afAuth: AngularFireAuth, private http: HttpClient) {
   }
   login() {
     this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
@@ -28,6 +29,9 @@ export class AppComponent {
   idToken() {
     this.afAuth.auth.currentUser.getIdToken().then((idToken: string) => {
       console.log(idToken);
+      this.http.get('http://localhost:8080', {params: {token: idToken}}).subscribe((res: string) => {
+        console.log(res);
+      });
     });
   }
 }

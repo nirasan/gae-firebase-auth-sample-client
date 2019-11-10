@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyB1DtpiU6dKAfRpx4TADrCY5vhmjlWDwwI',
-    authDomain: 'gae-firebase-auth-sample.firebaseapp.com',
-    databaseURL: 'https://gae-firebase-auth-sample.firebaseio.com',
-    projectId: 'gae-firebase-auth-sample',
-    storageBucket: 'gae-firebase-auth-sample.appspot.com',
-    messagingSenderId: '882200789802',
-    appId: '1:882200789802:web:86091ef7e508e9ab315453'
+    apiKey: "AIzaSyCrgbSlSjbHLCFg0nkxVNHhCqkw4sMAAzo",
+    authDomain: "gae-fire.firebaseapp.com",
+    databaseURL: "https://gae-fire.firebaseio.com",
+    projectId: "gae-fire",
+    storageBucket: "gae-fire.appspot.com",
+    messagingSenderId: "829754482529",
+    appId: "1:829754482529:web:c8394cb33cc11fbf706f20"
   }
 };
 
