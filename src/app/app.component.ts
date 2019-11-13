@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {environment} from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -32,7 +33,7 @@ export class AppComponent {
   accessServer() {
     this.afAuth.auth.currentUser.getIdToken().then((idToken: string) => {
       const header = new HttpHeaders().set('Authorization', 'Bearer ' + idToken);
-      this.http.get('http://localhost:8080', {headers: header}).subscribe((res: string) => {
+      this.http.get(environment.serverUrl, {headers: header}).subscribe((res: string) => {
         console.log(res);
       });
     });

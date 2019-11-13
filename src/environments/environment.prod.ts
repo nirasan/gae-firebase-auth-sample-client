@@ -1,5 +1,6 @@
 export const environment = {
   production: true,
+  serverUrl: 'https://gae-fire.appspot.com',
   firebase: {
     apiKey: "AIzaSyCrgbSlSjbHLCFg0nkxVNHhCqkw4sMAAzo",
     authDomain: "gae-fire.firebaseapp.com",
